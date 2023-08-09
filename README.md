@@ -1,4 +1,4 @@
-# A Transformer-Based Chemical Reaction Entity Recognition Method
+# DACRER: A Transformer-Based Chemical Reaction Entity Recognition Method
 This repository contains code/data for the paper "DACRER:A Transformer-Based Chemical Reaction Entity Recognition Method Driven by Natural Language Data Augmentation Strategy."
 
 ## Installation
@@ -17,10 +17,14 @@ This repository contains code/data for the paper "DACRER:A Transformer-Based Che
 We provide the annotated data after labeling and tenfold augmentation in `/tests`.
 
 ## Model training and testing
-* To trained a new model, we download ChemBERT model via path [chembert_cased](https://huggingface.co/jiangg/chembert_cased).
+* To trained a new model, we download ChemBERT model via path [chembert_cased](https://huggingface.co/jiangg/chembert_cased). 
 * Run `$ train.py` to perform training and model evalution using our annotated data `tests/data/role`.
-* Run `$ train_prod.py` to perform validation using another dataset `tests/data/prod`
+* Run `$ train_prod.py` to perform validation using another annotated dataset `tests/data/prod`.
+* We provided codes to train models using the provided data or your own dataset.
 
 ## Performance
-
+Performance of the provided models on our annotated data:
+Precision|Recall|F1|Accuracy
+:-:|:-:|:-:|:-:
+77.3|85.0|81.0|96.1
  
